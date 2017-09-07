@@ -1,0 +1,16 @@
+PODS:
+  - AyLoading (0.0.1)
+
+DEPENDENCIES:
+  - AyLoading (from `../`)
+
+EXTERNAL SOURCES:
+  AyLoading:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  AyLoading: 9a3eb701e5a0ec8fd768160ca25b990862907bd1
+
+PODFILE CHECKSUM: 64375363a940c961e0b9b675acd8065591d82b63
+
+COCOAPODS: 1.2.0.beta.3

@@ -1,0 +1,5 @@
+use_frameworks!
+
+target 'ExampleForiOS' do
+  pod 'AyLoading', :path => '../'
+end
