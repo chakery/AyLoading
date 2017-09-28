@@ -1,6 +1,14 @@
 # AyLoading
 this is a extension for iOS/macOS, which can add a loading state to UIButton(NSButton) UIView(NSView) UIBarButtonItem and its subclasses easily and quickly.
 
+# Screenshot
+
+### For iOS
+![For iOS](https://github.com/Chakery/AyLoading/blob/master/ExampleForiOS/ayLoadingForiOS.gif)
+
+### For macOS
+![For macOS](https://github.com/Chakery/AyLoading/blob/master/ExampleForMacOS/ayLoadingFormacOS.gif)
+
 # install
 
 ```
