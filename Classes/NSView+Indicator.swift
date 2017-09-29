@@ -8,83 +8,67 @@
 
 import Cocoa
 
-private var isLoadingKey: Void?
-private var progressIndicatorTempKey: Void?
+private var indicatorViewTempKey: Void?
 
 extension AyLoading where Base: NSView {
     
-    private var progressIndicatorTemp: NSProgressIndicator? {
+    private var indicatorViewTemp: IndicatorView? {
         get {
-            return objc_getAssociatedObject(base, &progressIndicatorTempKey) as? NSProgressIndicator
+            return objc_getAssociatedObject(base, &indicatorViewTempKey) as? IndicatorView
         }
         set {
-            objc_setAssociatedObject(base, &progressIndicatorTempKey, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            objc_setAssociatedObject(base, &indicatorViewTempKey, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
     }
     
-    public internal(set) var isLoading: Bool {
-        get {
-            return objc_getAssociatedObject(base, &isLoadingKey) as? Bool ?? false
+    public var indicatorView: IndicatorView {
+        if let val = indicatorViewTemp {
+            return val
         }
-        set {
-            objc_setAssociatedObject(base, &isLoadingKey, newValue, .OBJC_ASSOCIATION_COPY_NONATOMIC)
-        }
-    }
-    
-    public var progressIndicator: NSProgressIndicator {
-        if let progressIndicatorTemp = progressIndicatorTemp {
-            return progressIndicatorTemp
-        }
-        let indicator = NSProgressIndicator()
-        indicator.style = .spinningStyle
-        indicator.controlSize = .small
-        indicator.isDisplayedWhenStopped = false
-        indicator.stopAnimation(nil)
-        progressIndicatorTemp = indicator
+        let indicator = IndicatorView()
+        indicatorViewTemp = indicator
         return indicator
     }
     
     @discardableResult
-    public func startLoading() -> Bool {
-        guard !isLoading else {
+    public func startLoading(message: String? = nil) -> Bool {
+        guard !indicatorView.isLoading else {
             return false
         }
-        startAnimation()
+        startAnimation(message)
         return true
     }
     
     @discardableResult
     public func stopLoading() -> Bool {
-        guard isLoading else {
+        guard indicatorView.isLoading else {
             return false
         }
         stopAnimation()
         return true
     }
     
-    func startAnimation() {
-        setupProgressIndicator()
-        progressIndicator.startAnimation(nil)
-        isLoading = true
+    func startAnimation(_ message: String?) {
+        setupIndicatorView()
+        indicatorView.startAnimating()
+        indicatorView.message = message
     }
     
-    func stopAnimation() {
-        progressIndicator.stopAnimation(nil)
-        removeProgressIndicator()
-        isLoading = false
+    func stopAnimation(completed: AnimatedCompleted? = nil) {
+        indicatorView.stopAnimating(completed: completed)
     }
     
-    private func setupProgressIndicator() {
-        progressIndicator.translatesAutoresizingMaskIntoConstraints = false
-        base.addSubview(progressIndicator)
-        let centerX = NSLayoutConstraint(item: progressIndicator,
+    private func setupIndicatorView() {
+        indicatorView.translatesAutoresizingMaskIntoConstraints = false
+        base.addSubview(indicatorView)
+        let centerX = NSLayoutConstraint(item: indicatorView,
                                          attribute: .centerX,
                                          relatedBy: .equal,
                                          toItem: base,
                                          attribute: .centerX,
                                          multiplier: 1.0,
                                          constant: 0.0)
-        let centerY = NSLayoutConstraint(item: progressIndicator,
+        let centerY = NSLayoutConstraint(item: indicatorView,
                                          attribute: .centerY,
                                          relatedBy: .equal,
                                          toItem: base,
@@ -95,7 +79,4 @@ extension AyLoading where Base: NSView {
         base.addConstraint(centerY)
     }
     
-    private func removeProgressIndicator() {
-        progressIndicator.removeFromSuperview()
-    }
 }

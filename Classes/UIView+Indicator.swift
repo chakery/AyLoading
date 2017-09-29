@@ -8,41 +8,38 @@
 
 import UIKit
 
-private var isLoadingKey: Void?
-private var activityIndicatorTempKey: Void?
+private var indicatorViewTempKey: Void?
 
 extension AyLoading where Base: UIView {
     
-    private var activityIndicatorTemp: UIActivityIndicatorView? {
+    private var indicatorViewTemp: IndicatorView? {
         get {
-            return objc_getAssociatedObject(base, &activityIndicatorTempKey) as? UIActivityIndicatorView
+            return objc_getAssociatedObject(base, &indicatorViewTempKey) as? IndicatorView
         }
         set {
-            objc_setAssociatedObject(base, &activityIndicatorTempKey, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            objc_setAssociatedObject(base, &indicatorViewTempKey, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
     }
     
     public var isLoading: Bool {
-        return activityIndicator.isAnimating
+        return indicatorView.isLoading
     }
     
-    public var activityIndicator: UIActivityIndicatorView {
-        if let activityIndicatorTemp = activityIndicatorTemp {
-            return activityIndicatorTemp
+    public var indicatorView: IndicatorView {
+        if let val = indicatorViewTemp {
+            return val
         }
-        let indicator = UIActivityIndicatorView(activityIndicatorStyle: .gray)
-        indicator.hidesWhenStopped = true
-        indicator.stopAnimating()
-        activityIndicatorTemp = indicator
+        let indicator = IndicatorView()
+        indicatorViewTemp = indicator
         return indicator
     }
     
     @discardableResult
-    public func startLoading() -> Bool {
+    public func startLoading(message: String? = nil) -> Bool {
         guard !isLoading else {
             return false
         }
-        startAnimation()
+        startAnimation(message)
         return true
     }
     
@@ -55,27 +52,27 @@ extension AyLoading where Base: UIView {
         return true
     }
     
-    func startAnimation() {
+    func startAnimation(_ message: String?) {
         setupActivityIndicator()
-        activityIndicator.startAnimating()
+        indicatorView.message = message
+        indicatorView.startAnimating()
     }
     
-    func stopAnimation() {
-        activityIndicator.stopAnimating()
-        removeActivityIndicator()
+    func stopAnimation(completed: AnimatedCompleted? = nil) {
+        indicatorView.stopAnimating(completed: completed)
     }
     
     private func setupActivityIndicator() {
-        activityIndicator.translatesAutoresizingMaskIntoConstraints = false
-        base.addSubview(activityIndicator)
-        let centerX = NSLayoutConstraint(item: activityIndicator,
+        indicatorView.translatesAutoresizingMaskIntoConstraints = false
+        base.addSubview(indicatorView)
+        let centerX = NSLayoutConstraint(item: indicatorView,
                                          attribute: .centerX,
                                          relatedBy: .equal,
                                          toItem: base,
                                          attribute: .centerX,
                                          multiplier: 1.0,
                                          constant: 0.0)
-        let centerY = NSLayoutConstraint(item: activityIndicator,
+        let centerY = NSLayoutConstraint(item: indicatorView,
                                          attribute: .centerY,
                                          relatedBy: .equal,
                                          toItem: base,
@@ -84,10 +81,6 @@ extension AyLoading where Base: UIView {
                                          constant: 0.0)
         base.addConstraint(centerX)
         base.addConstraint(centerY)
-    }
-    
-    private func removeActivityIndicator() {
-        activityIndicator.removeFromSuperview()
     }
 }
 

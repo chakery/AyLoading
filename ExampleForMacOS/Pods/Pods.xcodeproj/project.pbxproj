@@ -7,15 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		15FCB2559CE6625A9DC0D9B1F12E93D3 /* NSView+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3D2775949A18A77B8644774ED24614 /* NSView+Animations.swift */; };
+		2B8153D2D8023A64A1585D97593DB023 /* NSView+Indicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAD403917D13FE0D0AAE6627EECC116 /* NSView+Indicator.swift */; };
 		31663D82931F6BCEC6944F0E905BBED3 /* Pods-ExampleForMacOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BC0C31869EAE912DC4B179B62AACB34 /* Pods-ExampleForMacOS-dummy.m */; };
-		3A9A303F7C5A6E3D0CBA1451536AC876 /* AyLoading-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 58CA8A771675A759EC9EDBBCFF5A8231 /* AyLoading-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5A75E618A51C6E42436B81D63FD59D49 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 270DD1219F1E6CF00379D39F252D87C6 /* Cocoa.framework */; };
+		5F3270B653F87AC5944CFDFA6461F1DA /* NSButton+Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB885ADDA9DDF60CF1180DFFEAC964D8 /* NSButton+Loading.swift */; };
+		5FB6F4ECD1D4A5E5CBF933DD7CF4E644 /* AyLoading-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 11E05A01024323951D571F9B1281FD24 /* AyLoading-dummy.m */; };
 		749477AC002FDCE832DED432AA998F8D /* Pods-ExampleForMacOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 70B7C4DF297FF931FA5FFF38F7384387 /* Pods-ExampleForMacOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7BEB1D62E6B7A0482EC1050679D752F9 /* NSView+Indicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDA912CC7E8C9874C6478BE73832A70 /* NSView+Indicator.swift */; };
-		BF966EDEF8FA76588409A76D3A74DF7C /* NSButton+Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E61A0274F4168257B10453F9AA611E /* NSButton+Loading.swift */; };
+		7A6DA03E00DB3747F0C7020ECDCC146B /* AyLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318BAC6A43EF2D8A7651164E810D78D1 /* AyLoading.swift */; };
+		877C4C8FAE9E5EBC5BAB957F97A14517 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 270DD1219F1E6CF00379D39F252D87C6 /* Cocoa.framework */; };
+		8F934A82D7E595659D58F876D9EB375D /* macOS+IndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BCFC87A7C39CE14FABAE42F93B41F9 /* macOS+IndicatorView.swift */; };
+		A69CE99B8E0DAF5EC0BC6C759F54DF71 /* AyLoading-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CAE8CDF92CB0E91B6BE6630EF63CFBCC /* AyLoading-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C949825EB9EBF44141F25CF3512A066F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 270DD1219F1E6CF00379D39F252D87C6 /* Cocoa.framework */; };
-		E1398B810DF4175E1C0A3EEAFF7140A0 /* AyLoading-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 45010A137B275CDDD4D4D0582D4776E1 /* AyLoading-dummy.m */; };
-		E78FC346B27AF3D1B5A117BD5804DC4B /* AyLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = F558E7A82796F11A99AF478C8CB02078 /* AyLoading.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,43 +25,45 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = C443C7BEB9C2FC10EC54D0659C386234;
+			remoteGlobalIDString = 7EA3ADBE0739D6F9BEE11E4ED221F20D;
 			remoteInfo = AyLoading;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		11E05A01024323951D571F9B1281FD24 /* AyLoading-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AyLoading-dummy.m"; sourceTree = "<group>"; };
+		17F02C593A3D2D322A8A81CBF20DC4BB /* AyLoading-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AyLoading-prefix.pch"; sourceTree = "<group>"; };
 		24E85668011125911A71E3F14EF88587 /* Pods-ExampleForMacOS-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ExampleForMacOS-frameworks.sh"; sourceTree = "<group>"; };
 		270DD1219F1E6CF00379D39F252D87C6 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
-		29E61A0274F4168257B10453F9AA611E /* NSButton+Loading.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "NSButton+Loading.swift"; sourceTree = "<group>"; };
 		2E5B8AF6CE23BB6947939770818D8FBD /* AyLoading.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AyLoading.framework; path = AyLoading.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		318BAC6A43EF2D8A7651164E810D78D1 /* AyLoading.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AyLoading.swift; sourceTree = "<group>"; };
+		3F3D2775949A18A77B8644774ED24614 /* NSView+Animations.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "NSView+Animations.swift"; sourceTree = "<group>"; };
 		428D56A0208B7D11AFDE5380AE48F6AE /* Pods-ExampleForMacOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-ExampleForMacOS.modulemap"; sourceTree = "<group>"; };
-		45010A137B275CDDD4D4D0582D4776E1 /* AyLoading-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AyLoading-dummy.m"; sourceTree = "<group>"; };
 		525F2E0A174173CCB93A54D5DBB91398 /* Pods-ExampleForMacOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ExampleForMacOS-acknowledgements.markdown"; sourceTree = "<group>"; };
 		53EF3B49963BF23098C13A28AC2C83C6 /* Pods-ExampleForMacOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ExampleForMacOS.debug.xcconfig"; sourceTree = "<group>"; };
-		58CA8A771675A759EC9EDBBCFF5A8231 /* AyLoading-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AyLoading-umbrella.h"; sourceTree = "<group>"; };
-		5ED6914C333692B0EF8DF7CF90DEEEBD /* AyLoading.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AyLoading.xcconfig; sourceTree = "<group>"; };
-		64FB766CB9B73FE9896D711FE84BD191 /* AyLoading-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AyLoading-prefix.pch"; sourceTree = "<group>"; };
 		70B7C4DF297FF931FA5FFF38F7384387 /* Pods-ExampleForMacOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ExampleForMacOS-umbrella.h"; sourceTree = "<group>"; };
 		7BC0C31869EAE912DC4B179B62AACB34 /* Pods-ExampleForMacOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ExampleForMacOS-dummy.m"; sourceTree = "<group>"; };
-		7EDA912CC7E8C9874C6478BE73832A70 /* NSView+Indicator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "NSView+Indicator.swift"; sourceTree = "<group>"; };
+		83BCFC87A7C39CE14FABAE42F93B41F9 /* macOS+IndicatorView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "macOS+IndicatorView.swift"; sourceTree = "<group>"; };
 		8DADFC6E8B81A3FAF896FC23E537E183 /* Pods_ExampleForMacOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ExampleForMacOS.framework; path = "Pods-ExampleForMacOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		B45EDB5364B6BEFD082A6FD33208CDEB /* Pods-ExampleForMacOS-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ExampleForMacOS-resources.sh"; sourceTree = "<group>"; };
-		C4B1C6A16DD0042F8B1133E78028168F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFC45FC9091DF0925DD8DAD30F1F083F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CAE8CDF92CB0E91B6BE6630EF63CFBCC /* AyLoading-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AyLoading-umbrella.h"; sourceTree = "<group>"; };
+		CB885ADDA9DDF60CF1180DFFEAC964D8 /* NSButton+Loading.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "NSButton+Loading.swift"; sourceTree = "<group>"; };
+		CEAD403917D13FE0D0AAE6627EECC116 /* NSView+Indicator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "NSView+Indicator.swift"; sourceTree = "<group>"; };
 		CF90EAD9F7BB9C2D33ABE23C39E51BE2 /* Pods-ExampleForMacOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ExampleForMacOS.release.xcconfig"; sourceTree = "<group>"; };
-		D491CA3D68D385905816DD18DB9771EE /* AyLoading.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = AyLoading.modulemap; sourceTree = "<group>"; };
+		D62C64C753B7A097A717982D899DCE49 /* AyLoading.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AyLoading.xcconfig; sourceTree = "<group>"; };
 		DB0D27502058F365E16020262CB88AF3 /* Pods-ExampleForMacOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ExampleForMacOS-acknowledgements.plist"; sourceTree = "<group>"; };
+		E21622E42CAA759CB8F77C45A29B8E25 /* AyLoading.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = AyLoading.modulemap; sourceTree = "<group>"; };
 		ECC56854D184F638A14E731C702B4995 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F558E7A82796F11A99AF478C8CB02078 /* AyLoading.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AyLoading.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		143F1E25D9BE44221E2C91DF98C1ED69 /* Frameworks */ = {
+		7131A1FC274177E295FAD5246E125990 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A75E618A51C6E42436B81D63FD59D49 /* Cocoa.framework in Frameworks */,
+				877C4C8FAE9E5EBC5BAB957F97A14517 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,16 +92,6 @@
 				04C068A18C5413F804A2959126093416 /* OS X */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		3D213C004E24CADB0E8A186F2740233B /* AyLoading */ = {
-			isa = PBXGroup;
-			children = (
-				C89AF000789970166EC3D239C0316F16 /* Classes */,
-				CA89F51D51225830561F80C4A8224AAA /* Support Files */,
-			);
-			name = AyLoading;
-			path = ../..;
 			sourceTree = "<group>";
 		};
 		47C882E8D956E1FB948B54987980E4D0 /* Pods-ExampleForMacOS */ = {
@@ -138,29 +132,27 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C89AF000789970166EC3D239C0316F16 /* Classes */ = {
+		9BFF4A26C5A5F93D7A68571A6749C2C1 /* AyLoading */ = {
 			isa = PBXGroup;
 			children = (
-				F558E7A82796F11A99AF478C8CB02078 /* AyLoading.swift */,
-				29E61A0274F4168257B10453F9AA611E /* NSButton+Loading.swift */,
-				7EDA912CC7E8C9874C6478BE73832A70 /* NSView+Indicator.swift */,
+				B2F140758FE510BB446D57A6A8B5C51E /* Classes */,
+				F239403E52186FEBFADB45B995ADEDB4 /* Support Files */,
+			);
+			name = AyLoading;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		B2F140758FE510BB446D57A6A8B5C51E /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				318BAC6A43EF2D8A7651164E810D78D1 /* AyLoading.swift */,
+				83BCFC87A7C39CE14FABAE42F93B41F9 /* macOS+IndicatorView.swift */,
+				CB885ADDA9DDF60CF1180DFFEAC964D8 /* NSButton+Loading.swift */,
+				3F3D2775949A18A77B8644774ED24614 /* NSView+Animations.swift */,
+				CEAD403917D13FE0D0AAE6627EECC116 /* NSView+Indicator.swift */,
 			);
 			name = Classes;
 			path = Classes;
-			sourceTree = "<group>";
-		};
-		CA89F51D51225830561F80C4A8224AAA /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				D491CA3D68D385905816DD18DB9771EE /* AyLoading.modulemap */,
-				5ED6914C333692B0EF8DF7CF90DEEEBD /* AyLoading.xcconfig */,
-				45010A137B275CDDD4D4D0582D4776E1 /* AyLoading-dummy.m */,
-				64FB766CB9B73FE9896D711FE84BD191 /* AyLoading-prefix.pch */,
-				58CA8A771675A759EC9EDBBCFF5A8231 /* AyLoading-umbrella.h */,
-				C4B1C6A16DD0042F8B1133E78028168F /* Info.plist */,
-			);
-			name = "Support Files";
-			path = "ExampleForMacOS/Pods/Target Support Files/AyLoading";
 			sourceTree = "<group>";
 		};
 		D6B6B11C142B0BB9462C7BEAC4C5A375 /* Targets Support Files */ = {
@@ -171,10 +163,24 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
+		F239403E52186FEBFADB45B995ADEDB4 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E21622E42CAA759CB8F77C45A29B8E25 /* AyLoading.modulemap */,
+				D62C64C753B7A097A717982D899DCE49 /* AyLoading.xcconfig */,
+				11E05A01024323951D571F9B1281FD24 /* AyLoading-dummy.m */,
+				17F02C593A3D2D322A8A81CBF20DC4BB /* AyLoading-prefix.pch */,
+				CAE8CDF92CB0E91B6BE6630EF63CFBCC /* AyLoading-umbrella.h */,
+				BFC45FC9091DF0925DD8DAD30F1F083F /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "ExampleForMacOS/Pods/Target Support Files/AyLoading";
+			sourceTree = "<group>";
+		};
 		F566E4F51622F35E50BAF1D1CE5ED95D /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				3D213C004E24CADB0E8A186F2740233B /* AyLoading */,
+				9BFF4A26C5A5F93D7A68571A6749C2C1 /* AyLoading */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
@@ -182,11 +188,11 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		A57F775CB8FEEBED99DD05F9C88E2356 /* Headers */ = {
+		BABC849726C6668B6E9F626BE4E66B65 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A9A303F7C5A6E3D0CBA1451536AC876 /* AyLoading-umbrella.h in Headers */,
+				A69CE99B8E0DAF5EC0BC6C759F54DF71 /* AyLoading-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,6 +207,23 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		7EA3ADBE0739D6F9BEE11E4ED221F20D /* AyLoading */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 577135AFB5D213181BCE67965F8E47E9 /* Build configuration list for PBXNativeTarget "AyLoading" */;
+			buildPhases = (
+				7B900EB98B97DDA66776DD9055668D15 /* Sources */,
+				7131A1FC274177E295FAD5246E125990 /* Frameworks */,
+				BABC849726C6668B6E9F626BE4E66B65 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AyLoading;
+			productName = AyLoading;
+			productReference = 2E5B8AF6CE23BB6947939770818D8FBD /* AyLoading.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		994CC7373DAA9975A8A1D267285EEB38 /* Pods-ExampleForMacOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D151FBFF95414AC87A150CAC3C0097D3 /* Build configuration list for PBXNativeTarget "Pods-ExampleForMacOS" */;
@@ -217,23 +240,6 @@
 			name = "Pods-ExampleForMacOS";
 			productName = "Pods-ExampleForMacOS";
 			productReference = 8DADFC6E8B81A3FAF896FC23E537E183 /* Pods_ExampleForMacOS.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		C443C7BEB9C2FC10EC54D0659C386234 /* AyLoading */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 8E5E7509C1FF350F0A2975F617C7DE8E /* Build configuration list for PBXNativeTarget "AyLoading" */;
-			buildPhases = (
-				5DF73C7A31ED758D077336C6FEA9C9BE /* Sources */,
-				143F1E25D9BE44221E2C91DF98C1ED69 /* Frameworks */,
-				A57F775CB8FEEBED99DD05F9C88E2356 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = AyLoading;
-			productName = AyLoading;
-			productReference = 2E5B8AF6CE23BB6947939770818D8FBD /* AyLoading.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -257,29 +263,31 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C443C7BEB9C2FC10EC54D0659C386234 /* AyLoading */,
+				7EA3ADBE0739D6F9BEE11E4ED221F20D /* AyLoading */,
 				994CC7373DAA9975A8A1D267285EEB38 /* Pods-ExampleForMacOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		5DF73C7A31ED758D077336C6FEA9C9BE /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E1398B810DF4175E1C0A3EEAFF7140A0 /* AyLoading-dummy.m in Sources */,
-				E78FC346B27AF3D1B5A117BD5804DC4B /* AyLoading.swift in Sources */,
-				BF966EDEF8FA76588409A76D3A74DF7C /* NSButton+Loading.swift in Sources */,
-				7BEB1D62E6B7A0482EC1050679D752F9 /* NSView+Indicator.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		6401A2E14DE73120CEDAD488264DFDDE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				31663D82931F6BCEC6944F0E905BBED3 /* Pods-ExampleForMacOS-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B900EB98B97DDA66776DD9055668D15 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FB6F4ECD1D4A5E5CBF933DD7CF4E644 /* AyLoading-dummy.m in Sources */,
+				7A6DA03E00DB3747F0C7020ECDCC146B /* AyLoading.swift in Sources */,
+				8F934A82D7E595659D58F876D9EB375D /* macOS+IndicatorView.swift in Sources */,
+				5F3270B653F87AC5944CFDFA6461F1DA /* NSButton+Loading.swift in Sources */,
+				15FCB2559CE6625A9DC0D9B1F12E93D3 /* NSView+Animations.swift in Sources */,
+				2B8153D2D8023A64A1585D97593DB023 /* NSView+Indicator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,47 +297,12 @@
 		A26BBE8A74A727ADE48B65310B6294E3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = AyLoading;
-			target = C443C7BEB9C2FC10EC54D0659C386234 /* AyLoading */;
+			target = 7EA3ADBE0739D6F9BEE11E4ED221F20D /* AyLoading */;
 			targetProxy = B50059DADBD107561640B55B687CFBE3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		1BEA6525C50CC82325341FEC9186C19D /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5ED6914C333692B0EF8DF7CF90DEEEBD /* AyLoading.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_VERSION = A;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/AyLoading/AyLoading-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/AyLoading/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				MODULEMAP_FILE = "Target Support Files/AyLoading/AyLoading.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = AyLoading;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		337AD37B27D7FFADF01DD8D7FE35B27B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -457,9 +430,9 @@
 			};
 			name = Debug;
 		};
-		BFFDDBBDE36F7B91751C2D8E599BAAE4 /* Debug */ = {
+		CCB0B98EF039105FB62B60D4A5BC5865 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5ED6914C333692B0EF8DF7CF90DEEEBD /* AyLoading.xcconfig */;
+			baseConfigurationReference = D62C64C753B7A097A717982D899DCE49 /* AyLoading.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "-";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -492,6 +465,41 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		CE0BDE7F3CCA2E413E731B8854E81095 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D62C64C753B7A097A717982D899DCE49 /* AyLoading.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/AyLoading/AyLoading-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/AyLoading/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MODULEMAP_FILE = "Target Support Files/AyLoading/AyLoading.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = AyLoading;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 		FC4738C3605827B2CD972C349A860865 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -549,11 +557,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8E5E7509C1FF350F0A2975F617C7DE8E /* Build configuration list for PBXNativeTarget "AyLoading" */ = {
+		577135AFB5D213181BCE67965F8E47E9 /* Build configuration list for PBXNativeTarget "AyLoading" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BFFDDBBDE36F7B91751C2D8E599BAAE4 /* Debug */,
-				1BEA6525C50CC82325341FEC9186C19D /* Release */,
+				CCB0B98EF039105FB62B60D4A5BC5865 /* Debug */,
+				CE0BDE7F3CCA2E413E731B8854E81095 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

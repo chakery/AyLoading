@@ -21,29 +21,17 @@ class ViewController: NSViewController {
     }
 
     @IBAction func buttonHandler(_ sender: NSButton) {
-        sender.ay.startLoading()
+        sender.ay.startLoading(message: "Login...")
         delay(3) { 
             sender.ay.stopLoading()
         }
     }
-    @IBAction func squareHandler(_ sender: NSButton) {
-        sender.ay.startLoading()
-        delay(3) {
-            sender.ay.stopLoading()
-        }
-    }
-    @IBAction func roundRectHandler(_ sender: NSButton) {
-        sender.ay.startLoading()
-        delay(3) {
-            sender.ay.stopLoading()
-        }
-    }
     @IBAction func squareButtonHandler(_ sender: NSButton) {
-        view.ay.startLoading()
         sender.ay.startLoading()
+        view.ay.startLoading(message: "Loading...")
         delay(3) {
-            self.view.ay.stopLoading()
             sender.ay.stopLoading()
+            self.view.ay.stopLoading()
         }
     }
     

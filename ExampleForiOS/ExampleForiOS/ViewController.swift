@@ -4,13 +4,12 @@
 //
 //  Created by Chakery on 2017/9/7.
 //  Copyright © 2017年 Chakery. All rights reserved.
-//
 
 import UIKit
 import AyLoading
 
 class ViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -20,16 +19,12 @@ class ViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     @IBAction func buttonHandler(_ sender: UIButton) {
-        sender.ay.startLoading()
-        view.ay.activityIndicator.color = UIColor.red
-        view.ay.startLoading()
-        delay(3) { 
+        sender.ay.startLoading(message: "btttttn...")
+        delay(3) {
             sender.ay.stopLoading()
-            self.view.ay.stopLoading()
         }
     }
     
@@ -44,6 +39,13 @@ class ViewController: UIViewController {
         sender.ay.startLoading()
         delay(3) {
             sender.ay.stopLoading()
+        }
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.ay.startLoading(message: "Loading...")
+        delay(3) {
+            self.view.ay.stopLoading()
         }
     }
     

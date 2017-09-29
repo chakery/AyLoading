@@ -1,16 +1,16 @@
 PODS:
-  - AyLoading (0.0.1)
+  - AyLoading (2.0.0)
 
 DEPENDENCIES:
   - AyLoading (from `../`)
 
 EXTERNAL SOURCES:
   AyLoading:
-    :path: "../"
+    :path: ../
 
 SPEC CHECKSUMS:
-  AyLoading: 9a3eb701e5a0ec8fd768160ca25b990862907bd1
+  AyLoading: c1e4808c9c45a7a7c3523bd5c0ab7dba440df5e9
 
 PODFILE CHECKSUM: 64375363a940c961e0b9b675acd8065591d82b63
 
-COCOAPODS: 1.2.0.beta.3
+COCOAPODS: 1.2.1

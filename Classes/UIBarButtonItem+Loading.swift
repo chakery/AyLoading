@@ -21,15 +21,15 @@ extension AyLoading where Base: UIBarButtonItem {
         }
     }
     
-    public var activityIndicator: UIActivityIndicatorView? {
+    public var indicatorView: IndicatorView? {
         if let view = baseContentView {
-            return view.ay.activityIndicator
+            return view.ay.indicatorView
         }
         return nil
     }
     
     @discardableResult
-    public func startLoading() -> Bool {
+    public func startLoading(message: String? = nil) -> Bool {
         guard let view = baseContentView else {
             return false
         }
@@ -37,7 +37,7 @@ extension AyLoading where Base: UIBarButtonItem {
             return false
         }
         prepareStartLoading()
-        view.ay.startAnimation()
+        view.ay.startAnimation(message)
         view.isUserInteractionEnabled = false
         return true
     }
@@ -51,21 +51,22 @@ extension AyLoading where Base: UIBarButtonItem {
             return false
         }
         prepareStopLoading()
-        view.ay.stopAnimation()
-        view.isUserInteractionEnabled = true
+        view.ay.stopAnimation {
+            view.isUserInteractionEnabled = true
+        }
         return true
     }
     
     private func prepareStartLoading() {
         if let view = baseContentView {
             subviewsTemp = view.subviews
-            view.subviews.forEach { $0.removeFromSuperview() }
+            view.subviews.forEach { $0.ay.removeFromSuperview(animated: true) }
         }
     }
     
     private func prepareStopLoading() {
         if let view = baseContentView {
-            subviewsTemp.forEach { view.addSubview($0) }
+            subviewsTemp.forEach { view.ay.addSubview($0, animated: true) }
         }
     }
     

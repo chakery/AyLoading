@@ -14,6 +14,8 @@
     typealias View = UIView
 #endif
 
+public typealias AnimatedCompleted = () -> Void
+
 public final class AyLoading<Base> {
     public let base: Base
     public init(_ base: Base) {
@@ -32,10 +34,25 @@ public extension AyLoadingCompatible {
     }
 }
 
+public protocol AyLoadingAction {
+    func startLoading(message: String?) -> Bool
+    func stopLoading() -> Bool
+}
+
+public extension AyLoadingAction {
+    func startLoading(message: String?) -> Bool {
+        return false
+    }
+    
+    func stopLoading() -> Bool {
+        return false
+    }
+}
+
 #if os(macOS) || os(iOS)
-    extension View: AyLoadingCompatible { }
+    extension View: AyLoadingCompatible, AyLoadingAction { }
 #endif
 
 #if os(iOS)
-    extension UIBarButtonItem: AyLoadingCompatible { }
+    extension UIBarButtonItem: AyLoadingCompatible, AyLoadingAction { }
 #endif

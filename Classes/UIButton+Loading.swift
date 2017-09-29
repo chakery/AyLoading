@@ -11,10 +11,10 @@ import UIKit
 extension AyLoading where Base: UIButton {
     
     @discardableResult
-    public func startLoading() -> Bool {
+    public func startLoading(message: String? = nil) -> Bool {
         guard !base.ay.isLoading else { return false }
         prepareStartLoading()
-        base.ay.startAnimation()
+        base.ay.startAnimation(message)
         base.isUserInteractionEnabled = false
         return true
     }
@@ -23,22 +23,23 @@ extension AyLoading where Base: UIButton {
     public func stopLoading() -> Bool {
         guard base.ay.isLoading else { return false }
         prepareStopLoading()
-        base.ay.stopAnimation()
-        base.isUserInteractionEnabled = true
+        base.ay.stopAnimation { [weak base] in
+            base?.isUserInteractionEnabled = true
+        }
         return true
     }
     
     private func prepareStartLoading() {
-        base.titleLabel?.removeFromSuperview()
-        base.imageView?.removeFromSuperview()
+        base.titleLabel?.ay.removeFromSuperview(animated: true)
+        base.imageView?.ay.removeFromSuperview(animated: true)
     }
     
     private func prepareStopLoading() {
         if let titleLabel = base.titleLabel {
-            base.addSubview(titleLabel)
+            base.ay.addSubview(titleLabel, animated: true)
         }
         if let imageView = base.imageView {
-            base.addSubview(imageView)
+            base.ay.addSubview(imageView, animated: true)
         }
     }
 }

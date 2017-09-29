@@ -22,34 +22,34 @@ extension AyLoading where Base: NSButton {
     }
     
     @discardableResult
-    public func startLoading() -> Bool {
-        guard !base.ay.isLoading else { return false }
-        prepareStartLoading()
-        base.ay.startAnimation()
+    public func startLoading(message: String? = nil) -> Bool {
+        guard !base.ay.indicatorView.isLoading else { return false }
         base.isEnabled = false
+        prepareStartLoading()
+        base.ay.startAnimation(message)
         return true
     }
     
     @discardableResult
     public func stopLoading() -> Bool {
-        guard base.ay.isLoading else { return false }
+        guard base.ay.indicatorView.isLoading else { return false }
         prepareStopLoading()
-        base.ay.stopAnimation()
-        base.isEnabled = true
+        base.ay.stopAnimation { [weak base] in
+            base?.isEnabled = true
+        }
         return true
     }
     
     private func prepareStartLoading() {
         subViewsTemp = base.subviews
-        NSAnimationContext.runAnimationGroup({ (context) in
-            context.duration = 0.3
-            base.subviews.forEach { $0.animator().removeFromSuperview() }
-        }, completionHandler: nil)
+        for item in subViewsTemp {
+            item.ay.removeFromSuperview(animated: true)
+        }
     }
     
     private func prepareStopLoading() {
-        NSAnimationContext.runAnimationGroup({ (context) in
-            subViewsTemp.forEach { base.animator().addSubview($0) }
-        }, completionHandler: nil)
+        for item in subViewsTemp {
+            base.ay.addSubview(item, animated: true)
+        }
     }
 }
