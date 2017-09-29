@@ -29,7 +29,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func rightHandler(_ sender: UIButton) {
-        sender.ay.startLoading()
+        sender.ay.startLoading(message: "righttttt")
         delay(3) {
             sender.ay.stopLoading()
         }
