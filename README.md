@@ -12,14 +12,20 @@ this is a extension for iOS/macOS, which can add a loading state to UIButton(NSB
 # install
 
 ```
-pod 'AyLoading'
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '8.0'
+use_frameworks!
+
+target 'MyApp' do
+  pod 'AyLoading', '~>2.0.0'
+end
 ```
 
 # Using
 
 ```
 // UIView or NSView
-view.ay.startLoading()
+view.ay.startLoading(message: "Loading...")
 view.ay.stopLoading()
 
 // UIButton or NSButton
