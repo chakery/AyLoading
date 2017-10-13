@@ -17,7 +17,7 @@ platform :ios, '8.0'
 use_frameworks!
 
 target 'MyApp' do
-  pod 'AyLoading', '~>2.0.0'
+  pod 'AyLoading', '~>2.0.1'
 end
 ```
 
