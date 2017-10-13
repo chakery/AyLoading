@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
         let leftBar = UIBarButtonItem(title: "Letf", style: .plain, target: self, action: #selector(barButtonItemHandler(_:)))
         navigationItem.leftBarButtonItem = leftBar
     }

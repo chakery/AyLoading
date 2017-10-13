@@ -60,14 +60,12 @@ extension AyLoading where Base: UIBarButtonItem {
     private func prepareStartLoading() {
         if let view = baseContentView {
             subviewsTemp = view.subviews
-            view.subviews.forEach { $0.ay.removeFromSuperview(animated: true) }
+            subviewsTemp.forEach { $0.isHidden = true }
         }
     }
     
     private func prepareStopLoading() {
-        if let view = baseContentView {
-            subviewsTemp.forEach { view.ay.addSubview($0, animated: true) }
-        }
+        subviewsTemp.forEach { $0.isHidden = false }
     }
     
     private var baseContentView: UIView? {
