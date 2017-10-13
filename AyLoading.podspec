@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name                    = "AyLoading"
-  s.version                 = "2.0.0"
+  s.version                 = "2.0.1"
   s.summary                 = "loading..."
   s.homepage                = "https://github.com/Chakery/AyLoading"
   s.license                 = { :type => "MIT", :file => "FILE_LICENSE" }
