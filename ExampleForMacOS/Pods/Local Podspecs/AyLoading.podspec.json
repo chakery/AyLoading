@@ -1,11 +1,11 @@
 {
   "name": "AyLoading",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "summary": "loading...",
   "homepage": "https://github.com/Chakery/AyLoading",
   "license": {
     "type": "MIT",
-    "file": "FILE_LICENSE"
+    "file": "LICENSE"
   },
   "authors": {
     "Chakery": "chakerychen@gmail.com"
@@ -16,7 +16,7 @@
   },
   "source": {
     "git": "https://github.com/Chakery/AyLoading.git",
-    "tag": "2.0.0"
+    "tag": "3.0.0"
   },
   "source_files": [
     "Classes",

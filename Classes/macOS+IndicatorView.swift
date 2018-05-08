@@ -26,7 +26,7 @@ public class IndicatorView: NSView {
         }
     }
     
-    public var padding: EdgeInsets = EdgeInsets(top: 0, left: 0, bottom: 0, right: 0) {
+    public var padding: NSEdgeInsets = NSEdgeInsets(top: 0, left: 0, bottom: 0, right: 0) {
         didSet {
             updateCustomConstraints()
         }
@@ -65,7 +65,7 @@ public class IndicatorView: NSView {
     
     public private(set) lazy var activityIndicator: NSProgressIndicator = {
         let indicator = NSProgressIndicator()
-        indicator.style = .spinningStyle
+        indicator.style = .spinning
         indicator.controlSize = .small
         indicator.isDisplayedWhenStopped = false
         indicator.stopAnimation(nil)
@@ -96,7 +96,7 @@ public class IndicatorView: NSView {
     private var labelSize: CGSize {
         if let val = message, !val.isEmpty {
             let str = NSString(string: val)
-            var size = str.size(withAttributes: [NSFontAttributeName: messageLabel.font ?? defaultFont])
+            var size = str.size(withAttributes: [NSAttributedStringKey.font: messageLabel.font ?? defaultFont])
             size.width += 2
             size.height += 2
             return size

@@ -78,7 +78,7 @@ public class IndicatorView: UIView {
     private var labelSize: CGSize {
         if let val = message, !val.isEmpty {
             let str = NSString(string: val)
-            var size = str.size(attributes: [NSFontAttributeName: messageLabel.font])
+            var size = str.size(withAttributes: [NSAttributedStringKey.font: messageLabel.font])
             size.width += 2
             size.height += 2
             return size

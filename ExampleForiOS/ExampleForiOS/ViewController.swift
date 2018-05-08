@@ -35,7 +35,7 @@ class ViewController: UIViewController {
         }
     }
     
-    func barButtonItemHandler(_ sender: UIBarButtonItem) {
+    @objc func barButtonItemHandler(_ sender: UIBarButtonItem) {
         sender.ay.startLoading()
         delay(3) {
             sender.ay.stopLoading()
