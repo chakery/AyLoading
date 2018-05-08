@@ -9,7 +9,14 @@ this is a extension for iOS/macOS, which can add a loading state to UIButton(NSB
 ### For macOS
 ![For macOS](https://github.com/Chakery/AyLoading/blob/master/ExampleForMacOS/ayLoadingFormacOS.gif)
 
-# install
+# Requirements
+
+|version|OS|swift|
+|---|---|---|
+|v2.0.1|iOS8+, macOS10.10+|3.x|
+|v3.0.0|iOS8+, macOS10.10+|4.x|
+
+# Installation
 
 ```
 source 'https://github.com/CocoaPods/Specs.git'
@@ -17,18 +24,8 @@ platform :ios, '8.0'
 use_frameworks!
 
 target 'MyApp' do
-  pod 'AyLoading', '~>2.0.1'
+  pod 'AyLoading', '3.0.0'
 end
-
-# if use Xcode9.0+
-ost_install do |installer|
-    installer.pods_project.targets.each do |target|
-        target.build_configurations.each do |config|
-            config.build_settings['SWIFT_VERSION'] = '3.2'
-        end
-    end
-end
-
 ```
 
 # Using
