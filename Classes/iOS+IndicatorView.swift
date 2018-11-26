@@ -61,7 +61,7 @@ public class IndicatorView: UIView {
     }
     
     public private(set) lazy var activityIndicator: UIActivityIndicatorView = {
-        let indicator = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+        let indicator = UIActivityIndicatorView(style: .gray)
         indicator.hidesWhenStopped = true
         indicator.stopAnimating()
         return indicator
@@ -78,7 +78,7 @@ public class IndicatorView: UIView {
     private var labelSize: CGSize {
         if let val = message, !val.isEmpty {
             let str = NSString(string: val)
-            var size = str.size(withAttributes: [NSAttributedStringKey.font: messageLabel.font])
+            var size = str.size(withAttributes: [NSAttributedString.Key.font: messageLabel.font])
             size.width += 2
             size.height += 2
             return size

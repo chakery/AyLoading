@@ -1,6 +1,6 @@
 {
   "name": "AyLoading",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "summary": "loading...",
   "homepage": "https://github.com/Chakery/AyLoading",
   "license": {
@@ -10,13 +10,14 @@
   "authors": {
     "Chakery": "chakerychen@gmail.com"
   },
+  "swift_version": "4.2",
   "platforms": {
     "ios": "8.0",
     "osx": "10.10"
   },
   "source": {
     "git": "https://github.com/Chakery/AyLoading.git",
-    "tag": "3.0.0"
+    "tag": "4.0.0"
   },
   "source_files": [
     "Classes",

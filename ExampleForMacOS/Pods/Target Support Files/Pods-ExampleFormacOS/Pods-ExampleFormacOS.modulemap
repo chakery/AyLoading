@@ -1,0 +1,6 @@
+framework module Pods_ExampleFormacOS {
+  umbrella header "Pods-ExampleFormacOS-umbrella.h"
+
+  export *
+  module * { export * }
+}

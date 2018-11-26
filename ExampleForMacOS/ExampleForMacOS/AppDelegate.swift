@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  ExampleForMacOS
+//  ExampleFormacOS
 //
-//  Created by Chakery on 2017/9/7.
-//  Copyright © 2017年 Chakery. All rights reserved.
+//  Created by Chakery on 2018/11/26.
+//  Copyright © 2018 Chakery. All rights reserved.
 //
 
 import Cocoa

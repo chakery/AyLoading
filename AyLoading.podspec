@@ -1,10 +1,11 @@
 Pod::Spec.new do |s|
   s.name                    = "AyLoading"
-  s.version                 = "3.0.0"
+  s.version                 = "4.0.0"
   s.summary                 = "loading..."
   s.homepage                = "https://github.com/Chakery/AyLoading"
   s.license                 = { :type => "MIT", :file => "LICENSE" }
   s.author                  = { "Chakery" => "chakerychen@gmail.com" }
+  s.swift_version           = "4.2"
   s.ios.deployment_target   = "8.0"
   s.osx.deployment_target   = "10.10"
   s.source                  = { :git => "https://github.com/Chakery/AyLoading.git", :tag => "#{s.version}" }
