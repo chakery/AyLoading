@@ -13,7 +13,7 @@ this is a extension for iOS/macOS, which can add a loading state to UIButton(NSB
 |---|---|---|
 |2.0.1|iOS8+, macOS10.10+|3.x|
 |3.0.0|iOS8+, macOS10.10+|4.0|
-|4.0.0|iOS8+, macOS10.10+|4.2|
+|4.0.1|iOS8+, macOS10.10+|4.2|
 
 # Installation
 
@@ -24,7 +24,7 @@ use_frameworks!
 swift_version = '4.2'
 
 target 'MyApp' do
-  pod 'AyLoading', '4.0.0'
+  pod 'AyLoading', '4.0.1'
 end
 ```
 
