@@ -1,0 +1,6 @@
+framework module AyLoading {
+  umbrella header "AyLoading-macOS-umbrella.h"
+
+  export *
+  module * { export * }
+}

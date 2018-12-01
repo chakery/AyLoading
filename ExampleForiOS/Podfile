@@ -1,7 +1,0 @@
-use_frameworks!
-platform :ios, '8.0'
-swift_version = '4.2'
-
-target 'ExampleForiOS' do
-  pod 'AyLoading', :path => '../'
-end

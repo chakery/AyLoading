@@ -1,0 +1,12 @@
+use_frameworks!
+swift_version = '4.2'
+
+target 'iOS' do
+  platform :ios, '8.0'
+  pod 'AyLoading', :path => '../'
+end
+
+target 'macOS' do
+  platform :osx, '10.10'
+  pod 'AyLoading', :path => '../'
+end

@@ -41,7 +41,9 @@ extension AyLoading where Base: NSButton {
     }
     
     private func prepareStartLoading() {
-        subViewsTemp = base.subviews
+        subViewsTemp = base.subviews.filter {
+            "NSButtonTextField" == String(describing: type(of: $0))
+        }
         for item in subViewsTemp {
             item.ay.removeFromSuperview(animated: true)
         }

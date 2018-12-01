@@ -77,31 +77,18 @@ public class IndicatorView: NSView {
         let label = NSTextField()
         label.isEditable = false
         label.isSelectable = false
-        label.textColor = .gray
         label.backgroundColor = .controlColor
         label.drawsBackground = false
         label.isBezeled = false
         label.alignment = .natural
-        label.font = self.defaultFont
         label.lineBreakMode = .byClipping
         label.cell?.isScrollable = true
         label.cell?.wraps = false
         return label
     }()
     
-    private var defaultFont: NSFont {
-        return NSFont.systemFont(ofSize: 15.0)
-    }
-    
     private var labelSize: CGSize {
-        if let val = message, !val.isEmpty {
-            let str = NSString(string: val)
-            var size = str.size(withAttributes: [NSAttributedString.Key.font: messageLabel.font ?? defaultFont])
-            size.width += 2
-            size.height += 2
-            return size
-        }
-        return .zero
+        return messageLabel.sizeThatFits(.zero)
     }
     
     private var customConstraints: [NSLayoutConstraint] = []

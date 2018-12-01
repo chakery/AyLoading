@@ -1,6 +1,0 @@
-framework module AyLoading {
-  umbrella header "AyLoading-umbrella.h"
-
-  export *
-  module * { export * }
-}

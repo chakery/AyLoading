@@ -69,21 +69,12 @@ public class IndicatorView: UIView {
     
     public private(set) lazy var messageLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 15.0)
         label.textColor = UIColor.darkGray
-        label.textAlignment = .left
         return label
     }()
     
     private var labelSize: CGSize {
-        if let val = message, !val.isEmpty {
-            let str = NSString(string: val)
-            var size = str.size(withAttributes: [NSAttributedString.Key.font: messageLabel.font])
-            size.width += 2
-            size.height += 2
-            return size
-        }
-        return .zero
+        return messageLabel.sizeThatFits(.zero)
     }
     
     private var customConstraints: [NSLayoutConstraint] = []
