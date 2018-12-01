@@ -3,11 +3,9 @@ this is a extension for iOS/macOS, which can add a loading state to UIButton(NSB
 
 # Screenshot
 
-### For iOS
-![For iOS](https://github.com/Chakery/AyLoading/blob/master/ExampleForiOS/ayLoadingForiOS.gif)
+![iOS](https://github.com/Chakery/AyLoading/blob/master/example/screenshot/ios.gif)
 
-### For macOS
-![For macOS](https://github.com/Chakery/AyLoading/blob/master/ExampleForMacOS/ayLoadingFormacOS.gif)
+![macOS](https://github.com/Chakery/AyLoading/blob/master/example/screenshot/macos.gif)
 
 # Requirements
 
